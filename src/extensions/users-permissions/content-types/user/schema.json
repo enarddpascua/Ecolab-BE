@@ -63,11 +63,11 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "courses": {
+    "course": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::course.course",
-      "mappedBy": "user"
+      "inversedBy": "users"
     }
   }
 }

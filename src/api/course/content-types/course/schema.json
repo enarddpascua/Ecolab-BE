@@ -33,17 +33,17 @@
         "audios"
       ]
     },
-    "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "courses"
-    },
     "course_code": {
       "type": "string"
     },
     "possible_career": {
       "type": "richtext"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "course"
     }
   }
 }
